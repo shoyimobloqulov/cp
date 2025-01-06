@@ -1,0 +1,1 @@
+#yaqinda biror narsa boladi
