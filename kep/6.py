@@ -6,3 +6,4 @@ def a(n):
 
 n = int(input())
 print(a(n))
+2

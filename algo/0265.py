@@ -1,18 +1,18 @@
-def main():
-    import sys
-    input = sys.stdin.read
-    data = input().split()
+n = int(input())
+l = list(map(int, input().split()))
+t = int(input())
 
-    n = int(data[0])
-    arr = list(map(int, data[1:n+1]))
-    m = int(data[n+1])
-    queries = list(map(int, data[n+2:]))
+dic = {}
 
-    from collections import Counter
-    count = Counter(arr)
+for i in l:
+    if i in dic:
+        dic[i] += 1
+    else:
+        dic[i] = 1
 
-    result = sum(count[q] if q in count else 0 for q in queries)
-    print(result)
-
-if __name__ == "__main__":
-    main()
+s = 0
+for _ in range(t):
+    x = int(input())
+    if x in dic:
+        s += dic[x]
+print(s)
